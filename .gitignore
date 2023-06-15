@@ -1,0 +1,23 @@
+# Ignore .NET build artifacts
+bin/
+obj/
+
+# Ignore Node.js build artifacts
+node_modules/
+
+# Ignore Next.js build output
+.next/
+
+# Ignore development environment files
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Ignore Visual Studio Code specific files
+.vscode/
+
+# Ignore Docker related files
+docker-compose.yml
+docker-compose.override.yml
+Dockerfile.*
