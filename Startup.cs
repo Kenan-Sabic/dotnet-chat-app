@@ -4,7 +4,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
-namespace YourProjectNamespace
+namespace KenanChatApp
 {
     public class Startup
     {
@@ -22,6 +22,8 @@ namespace YourProjectNamespace
             // services.AddDbContext<YourDbContext>();
             // services.AddAuthentication();
             // services.AddAuthorization();
+            services.AddSignalR();
+
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -47,6 +49,8 @@ namespace YourProjectNamespace
         endpoints.MapControllerRoute(
             name: "default",
             pattern: "{controller=Home}/{action=Index}/{id?}");
+
+        endpoints.MapHub<ChatHub>("/chatHub");    
         
         endpoints.MapControllerRoute(
             name: "chat",

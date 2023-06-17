@@ -12,14 +12,17 @@
     "@types/node": "20.3.1",
     "@types/react": "18.2.12",
     "@types/react-dom": "18.2.5",
+    "@types/socket.io-client": "^3.0.0",
     "autoprefixer": "10.4.14",
+    "axios": "^1.4.0",
     "eslint": "8.42.0",
     "eslint-config-next": "13.4.5",
-    "isomorphic-ws": "^5.0.0",
     "next": "13.4.5",
     "postcss": "8.4.24",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-router-dom": "^6.13.0",
+    "socket.io-client": "^4.6.2",
     "tailwindcss": "3.3.2",
     "typescript": "5.1.3"
   }
