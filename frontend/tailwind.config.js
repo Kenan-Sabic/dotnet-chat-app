@@ -15,9 +15,8 @@ module.exports = {
 
       },
       backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+       
+        'castle-floor-1' : "url('../../assets/images/diego-lopez-groundtile1.jpg')",
       },
       fontFamily: {
         'vt323' : ['VT323' , 'monospace'],
