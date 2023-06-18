@@ -1,14 +1,18 @@
 import React from 'react'
+import UserIDdisplay from './UserIDdisplay'
+import LobbyForm from './LobbyForm'
+import UsernameForm from './UsernameForm'
 
 type Props = {}
 
 const MainBody = (props: Props) => {
   return (
-    <div className='flex flex-col items-center justify-center min-h-screen w-full bg-castle-floor-1 bg-repeat'>
-        <h1 className='text-white text-4xl font-vt323 '>Hi there dear friend</h1>
-        <h1 className='text-white text-4xl font-vt323 '>Welcome to</h1>
-        <h1 className='text-white text-4xl font-vt323 '>the dungeon</h1>
-
+    <div className='flex flex-col items-center pt-4 min-h-[80vh] w-11/12 bg-raisingBlack'>
+     <div className='w-10/12 min-h-[50vh] bg-dimGray '>
+      <UsernameForm></UsernameForm>
+      <UserIDdisplay></UserIDdisplay>
+      <LobbyForm></LobbyForm>
+     </div>
     </div>
   )
 }
