@@ -1,18 +1,28 @@
-import React from 'react'
-import UserIDdisplay from './UserDisplay'
+'use client'
+import React, {useState} from 'react'
+import UserDisplay from './UserDisplay'
 import LobbyForm from './LobbyForm'
 import UsernameForm from './UsernameForm'
 import AboutSection from './AboutSection'
 import JoinForm from './JoinForm'
 
-type Props = {}
+type Props = {
+
+  uniqueId: string;
+}
 
 const MainBody = (props: Props) => {
+  const [displayName, setDisplayName] = useState('');
+
+  const handleNameSubmit = (name: string) => {
+    setDisplayName(name);
+  };
+
   return (
     <div className='flex flex-col items-center gap-4 py-4 px-2 my-2 min-h-[80vh] w-11/12 bg-raisingBlack bg-opacity-90'>
 
-      <UsernameForm></UsernameForm>
-      <UserIDdisplay></UserIDdisplay>
+      <UsernameForm onNameSubmit={handleNameSubmit} ></UsernameForm>
+      <UserDisplay uniqueId={props.uniqueId} displayName={displayName}></UserDisplay>
       <JoinForm></JoinForm>
       <LobbyForm></LobbyForm>
       <AboutSection></AboutSection>
