@@ -15,6 +15,7 @@ const AboutSection = (props: Props) => {
         a lobby set to public.
         The project is obviously not finished yet and nothing works.
         Later on there might be more features but for now these are 
+        the ones I have planned. 
       </p>
     </div>
   )
