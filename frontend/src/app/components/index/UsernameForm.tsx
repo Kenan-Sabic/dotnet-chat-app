@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import{ faker }from '@faker-js/faker';
 
 type Props = {
   onNameSubmit: (name: string) => void;
@@ -7,8 +8,21 @@ type Props = {
 const UsernameForm = ({ onNameSubmit }: Props) => {
   const [name, setName] = useState('');
 
+  const generateRandomName = () => {
+    let randomName = '';
+    while (randomName.length > 12 || randomName.length === 0) {
+      randomName = faker.name.firstName();
+    }
+    return randomName;
+  };
+
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setName(event.target.value);
+  };
+
+  const handleRandomName = () => {
+    const randomName = generateRandomName();
+    setName(randomName);
   };
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
@@ -29,6 +43,13 @@ const UsernameForm = ({ onNameSubmit }: Props) => {
             value={name}
             onChange={handleInputChange}
           />
+          <button
+            type="button"
+            onClick={handleRandomName}
+            className='text-white bg-gold font-vt323 font-semibold p-1 m-1'
+          >
+            Generate Random Name
+          </button>
           <input
             type="submit"
             value="Enter"
