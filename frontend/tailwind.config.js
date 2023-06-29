@@ -1,30 +1,26 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+export default {
   content: [
-    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+
   ],
   theme: {
     extend: {
       colors: {
         raisingBlack : '#37323E',
         dimGray : '#6D6A75', 
-        gold : '#DEB841',
-
-
-      },
-      backgroundImage: {
-       
-        'castle-floor-1' : "url('../../assets/images/diego-lopez-groundtile1.jpg')",
-        'dungeonWall-1' : "url('../../assets/images/dungeonWall-1.png')",
+        gold : '#DEB841', 
       },
       fontFamily: {
         'vt323' : ['VT323' , 'monospace'],
         'electrolize' : ['Electrolize', 'sans-serif'],
-        '2Play' : ['Press Start 2P', 'sans-serif']
-      }
+        '2Play' : ['Press Start 2P', 'sans-serif'] },
+        backgroundImage: {
+          "deungeonwall-1" : "url('/src/assets/images/dungeonWall-1.png')",
+        }
     },
   },
   plugins: [],
 }
+

@@ -1,11 +1,7 @@
 import React, { useState } from 'react';
-import{ faker }from '@faker-js/faker';
+import { faker } from '@faker-js/faker';
 
-type Props = {
-  onNameSubmit: (name: string) => void;
-};
-
-const UsernameForm = ({ onNameSubmit }: Props) => {
+const UsernameForm = ({ onNameSubmit }) => {
   const [name, setName] = useState('');
 
   const generateRandomName = () => {
@@ -16,7 +12,7 @@ const UsernameForm = ({ onNameSubmit }: Props) => {
     return randomName;
   };
 
-  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleInputChange = (event) => {
     setName(event.target.value);
   };
 
@@ -25,7 +21,7 @@ const UsernameForm = ({ onNameSubmit }: Props) => {
     setName(randomName);
   };
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (event) => {
     event.preventDefault();
     onNameSubmit(name);
   };
@@ -44,18 +40,18 @@ const UsernameForm = ({ onNameSubmit }: Props) => {
             onChange={handleInputChange}
           />
           <div className='flex flex-col md:flex-row '>
-          <button
-            type="button"
-            onClick={handleRandomName}
-            className='text-white bg-gold font-vt323 font-semibold p-1 m-1'
-          >
-            Generate Random Name
-          </button>
-          <input
-            type="submit"
-            value="Enter"
-            className='text-white bg-gold font-vt323 font-semibold py-1 px-4 m-1'
-          />
+            <button
+              type="button"
+              onClick={handleRandomName}
+              className='text-white bg-gold font-vt323 font-semibold p-1 m-1'
+            >
+              Generate Random Name
+            </button>
+            <input
+              type="submit"
+              value="Enter"
+              className='text-white bg-gold font-vt323 font-semibold py-1 px-4 m-1'
+            />
           </div>
         </div>
       </form>

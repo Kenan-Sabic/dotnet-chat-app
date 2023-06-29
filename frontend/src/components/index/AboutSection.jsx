@@ -1,8 +1,8 @@
 import React from 'react'
 
-type Props = {}
+ Props = {}
 
-const AboutSection = (props: Props) => {
+const AboutSection = (props) => {
   return (
     <div className='text-white font-vt323'>
       <h1 className='text-xl'>About</h1>
