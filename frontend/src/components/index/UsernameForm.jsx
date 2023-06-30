@@ -7,7 +7,7 @@ const UsernameForm = ({ onNameSubmit }) => {
   const generateRandomName = () => {
     let randomName = '';
     while (randomName.length > 12 || randomName.length === 0) {
-      randomName = faker.name.firstName();
+      randomName = faker.person.firstName();
     }
     return randomName;
   };

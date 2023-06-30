@@ -1,8 +1,6 @@
-import React from 'react';
+import React from 'react'
 
-Props = {};
-
-const JoinForm = (props) => {
+const JoinForm = () => {
   return (
     <div className='border-double border-gold border-4 p-2 w-full'>
       <h1 className='w-full text-center text-white text-xl font-vt323 font-semibold'>Join a lobby</h1>
@@ -25,4 +23,4 @@ const JoinForm = (props) => {
   );
 };
 
-export default JoinForm;
+export default JoinForm

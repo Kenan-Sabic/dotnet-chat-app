@@ -1,7 +1,5 @@
 import React from 'react';
 
- Props = {};
-
 const LobbyForm = (props) => {
   return (
     <div className='border-double border-gold border-4 p-2 w-full'>
