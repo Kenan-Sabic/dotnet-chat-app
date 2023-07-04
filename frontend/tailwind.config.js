@@ -18,6 +18,7 @@ export default {
         '2Play' : ['Press Start 2P', 'sans-serif'] },
         backgroundImage: {
           "deungeonwall-1" : "url('/src/assets/images/dungeonWall-1.png')",
+          "chat-wall" : "url('/src/assets/images/chat-wall-bg.png')",
         }
     },
   },
