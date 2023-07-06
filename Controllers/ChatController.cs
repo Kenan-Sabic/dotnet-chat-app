@@ -1,15 +1,23 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.WebSockets;
 using System;
+using System.Collections.Generic;
 using System.Net.WebSockets;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace YourProjectNamespace.Controllers
+namespace KenanChatApp.Controllers
 {
     public class ChatController : Controller
     {
+        private readonly Dictionary<string, string> _userDictionary;
+
+        public ChatController()
+        {
+            _userDictionary = new Dictionary<string, string>();
+        }
+
         public async Task Chat()
         {
             if (HttpContext.WebSockets.IsWebSocketRequest)

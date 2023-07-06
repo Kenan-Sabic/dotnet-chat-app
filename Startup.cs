@@ -8,6 +8,8 @@ namespace KenanChatApp
 {
     public class Startup
     {
+        
+        
         private readonly IConfiguration _configuration;
 
         public Startup(IConfiguration configuration)
@@ -23,6 +25,8 @@ namespace KenanChatApp
             // services.AddAuthentication();
             // services.AddAuthorization();
             services.AddSignalR();
+             Dictionary<string, User> userDictionary = new Dictionary<string, User>();
+             services.AddSingleton(userDictionary);
 
         }
 
