@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import TitleBanner from '../components/index/TitleBanner';
+import TitleBanner from '../components/general/TitleBanner';
 import MainBody from '../components/index/MainBody';
 import { v4 as uuidv4 } from 'uuid';
 
